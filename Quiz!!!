@@ -1,0 +1,163 @@
+<html>
+	<head>
+	<style ="text/css">
+	body{
+		background-color: gray;
+		color: white;
+	}
+	textarea{
+		color: blue;
+		padding: 10px;
+		padding-bottom: 10px;
+	}
+	h1{
+		color: black;
+		font-size: 40px;
+		font-family: harrington;
+	}
+	
+	</style>
+	
+<script>
+
+function saysubmit()
+	{
+		alert("Submit?");
+	}
+	
+var text2display = "";
+var answers = new Array(3);
+	answers[0] = "1. Pushes and Pulls/n";
+	answers[1] = "2. Repository/n";
+	answers[2] = "3. A free and open-source collection of tools for creating websites/n";
+	answers[3] = "4. 5. ";
+	//answers[4] = "5. ";
+	//answers[5] = "6. ";
+	//answers[6] = "7. ";
+	//answers[7] = "8. ";
+	//answers[8] = "9. ";
+	//answers[9] = "10. ";
+var questions = new Arrays(3);
+	questions[0] "Q1";
+	questions[1] "Q2";
+	questions[2] "Q3";
+	//questions[3] "Q4";
+	//questions[4] "Q5";
+	//questions[5] "Q6";
+	//questions[6] "Q7";
+	//questions[7] "Q8";
+//questions[8] "Q9";
+	//questions[9] "Q10";
+	
+
+	
+function checkQs(s)
+	{
+	var qs = document.getElementsByName(s);
+	var noOfRadios = qs.length;
+			for(var i = 0; i < noOfRadios; i++)
+			{
+				if(qs[i].checked)
+				{
+				if(qs[i].value=="Correct")
+					text2display = text2display + "This was correct";
+				else text2display = text2display + answers[questions.indexOf(s)];
+					break;
+				}
+			}
+		}
+	
+function checkAll()
+{
+	for(var i = 0; i < questions.length; i++)
+	{
+		checkQs(questions[i]);
+	}
+		quiz.answersBox.value = text2display;
+
+}
+	
+</script>
+
+</head>
+	
+	
+	<body>
+		<h1> QUIZ </h1>
+		
+		<hr>
+		<br>
+		
+	<form name ="quiz">
+		<ol>
+			<li> How to send your Github code to another person? </li>
+				<ul>
+					<li><input type = "radio" name ="q1" value = "correct"> Pushes and Pulls</input></li>
+					<li><input type = "radio" name ="q1" value = "wrong"> Send it</input></li>
+					<li><input type = "radio" name ="q1" value = "wrong"> Email it</input></li>
+				</ul>
+			<li> What is the folder with your Github code called? </li>
+				<ul>
+					<li><input type = "radio" name ="Q2" value = "wrong"> GitFolder</input></li>
+					<li><input type = "radio" name ="Q2" value = "correct"> Repository</input></li>
+					<li><input type = "radio" name ="Q2" value = "wrong"> Storage</input></li>
+				</ul>
+			<li> What is bootstrap? </li>
+				<ul>
+					<li><input type = "radio" name ="Q3" value = "correct"> A free and open-source collection of tools for creating websites. </input></li>
+					<li><input type = "radio" name ="Q3" value = "wrong"> A template for creating websites.</input></li>
+					<li><input type = "radio" name ="Q3" value = "wrong"> A format for dragging and dropping website ideas.</input></li>
+				</ul>
+			<li> What is the latest style of HTML? </li>
+				<ul>
+					<li><input type = "radio" name ="Q4" value = "wrong">4</input></li>
+					<li><input type = "radio" name ="Q4" value = "wrong">3</input></li>
+					<li><input type = "radio" name ="Q4" value = "correct">5</input></li>
+				</ul>
+		<!--	<li>q5 How do you ? </li>
+				<ul>
+					<li><input type = "radio" name ="Q5" value = "wrong"></input></li>
+					<li><input type = "radio" name ="Q5" value = "correct"></input></li>
+					<li><input type = "radio" name ="Q5" value = "wrong"></input></li>
+				</ul>
+			<li>q6 How do you ? </li>
+				<ul>
+					<li><input type = "radio" name ="Q6" value = "wrong"></input></li>
+					<li><input type = "radio" name ="Q6" value = "wrong"></input></li>
+					<li><input type = "radio" name ="Q6" value = "correct"></input></li>
+				</ul>
+			<li>q7 How do you ? </li>
+				<ul>
+					<li><input type = "radio" name ="Q7" value = "correct"></input></li>
+					<li><input type = "radio" name ="Q7" value = "wrong"></input></li>
+					<li><input type = "radio" name ="Q7" value = "wrong"></input></li>
+				</ul>
+			<li>q8 How do you ? </li>
+				<ul>
+					<li><input type = "radio" name ="Q8" value = "wrong"></input></li>
+					<li><input type = "radio" name ="Q8" value = "correct"></input></li>
+					<li><input type = "radio" name ="Q8" value = "wrong"></input></li>
+				</ul>
+			<li> q9 How do you ? </li>
+				<ul>
+					<li><input type = "radio" name ="Q9" value = "wrong"></input></li>
+					<li><input type = "radio" name ="Q9" value = "wrong"></input></li>
+					<li><input type = "radio" name ="Q9" value = "correct"></input></li>
+				</ul>
+			<li> q10 How do you ? </li>
+				<ul>
+					<li><input type = "radio" name ="Q10" value = "correct"></input></li>
+					<li><input type = "radio" name ="Q10" value = "wrong"></input></li>
+					<li><input type = "radio" name ="Q10" value ="wrong"></input></li>
+				</ul>
+				-->
+		</ol>
+		<input type = "button" value = "Submit?" onCLick = "saysubmit()"></input>
+		<input type = "button" value = "Submit" onCLick = "checkAll()"></input>
+		<input type = "reset" value = "Clear"></input>
+	<br>
+		<textarea rows = "12" cols = "100"> Answers Below: </textarea>
+	</form>
+	</body>
+	
+</html>
